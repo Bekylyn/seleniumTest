@@ -32,10 +32,26 @@ jobs:
       - name: Build and run Selenium tests
         run: mvn clean test
 
- - name: Run Tests
-run: mvn clean test
-  - name: Upload Test Reports
-uses: actions/upload-artifact@v3
-with:
-  name: test-reports
-  path: target/surefire-reports/
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Set up JDK
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Run Tests
+        run: mvn clean test
+
+      - name: Upload Test Reports
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-reports
+          path: target/surefire-reports/
+
