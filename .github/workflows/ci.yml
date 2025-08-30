@@ -32,3 +32,10 @@ jobs:
       - name: Build and run Selenium tests
         run: mvn clean test
 
+ - name: Run Tests
+run: mvn clean test
+  - name: Upload Test Reports
+uses: actions/upload-artifact@v3
+with:
+  name: test-reports
+  path: target/surefire-reports/
