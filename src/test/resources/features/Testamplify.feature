@@ -9,7 +9,7 @@ Feature: TestAmplify Landing Page
     And user enters first name "Test"
     And user enters last name "Akin"
     And User selects country and enters contact number "8023456789"
-    And user enters email address "Test1@yopmail.com"
+    And user enters email address "Testaccount2@yopmail.com"
     And user enters password "Testamplify@55"
     And user confirms password "Testamplify@55"
     And user clicks on signup
