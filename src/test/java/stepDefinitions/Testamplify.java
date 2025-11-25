@@ -134,10 +134,6 @@ import org.openqa.selenium.WebElement;
                  System.out.println("OTP verified, redirected to confirm account page!");
              }
 
-
-
-
-
          }
 
 
